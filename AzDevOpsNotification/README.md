@@ -4,5 +4,5 @@ Disable and enable Azure DevOps notifications when using Azure DevOps Migration 
 
 ## Get Help
 
-- open [filename].ps1 in editor
-- run 'Get-Help ./[filename].ps1 -Full' 
+- open [filename].ps1 in an editor
+- run 'Get-Help .\[filename].ps1 -Full' 
