@@ -25,7 +25,7 @@ param(
     [Parameter(Mandatory = $true)]
     [ValidateNotNullorEmpty()]
     [string]$OrganizationUrl,
-    # Azure DevOps PAT
+    # Azure DevOps PAT (Scope: Notifications - Read, write, & manage)
     [Parameter(Mandatory = $true)]
     [ValidateNotNullorEmpty()]
     [string]$Pat
