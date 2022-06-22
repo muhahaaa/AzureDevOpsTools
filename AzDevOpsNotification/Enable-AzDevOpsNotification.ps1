@@ -19,7 +19,7 @@
     ./Enable-AzDevOpsNotifications.ps1 -OrganizationUrl http://dev.azure.com/your-org -Pat 12345xxxYOURPATxxx67890
 
     .LINK
-    https://github.com/muhahaaa/AzureDevOps
+    https://github.com/muhahaaa/AzureDevOpsTools
 #>
 
 [CmdletBinding()]

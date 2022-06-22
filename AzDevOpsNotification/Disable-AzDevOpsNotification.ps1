@@ -19,7 +19,7 @@
     This PowerShell script is released under the MIT license (https://github.com/muhahaaa/AzureDevOpsTools/blob/main/LICENSE.md)
 
     .LINK
-    https://github.com/muhahaaa/AzureDevOps
+    https://github.com/muhahaaa/AzureDevOpsTools
 #>
 
 [CmdletBinding()]
@@ -52,7 +52,7 @@ foreach ($subscription in $subscriptions) {
     if ($response.StatusCode -eq 200){
         Write-Host "- disabled"
         if ($subscription -eq "ms.vss-mentions.identity-mention-subscription"){
-            Write-Warning "You have deactivated @mention notifications for the whole organization. This can't be re-activated in the DevOps web interface. Please run 'Enable-AzDevOpsNotification.ps1' afterwards."
+            Write-Warning "You have deactivated @mention notifications for the whole organization. This can't be re-activated in the Azure DevOps web interface. Please run 'Enable-AzDevOpsNotification.ps1' afterwards."
         }
     }
 }
