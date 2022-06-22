@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AzDevOpsNotification - Disable-AzDevOpsNotifications",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/AzDevOpsNotification/Disable-AzDevOpsNotification.ps1",
+            "cwd": "${workspaceFolder}",
+            "args": ["-OrganizationUrl ${input:OrganizationUrl} -Pat ${input:Pat}"]
+        },
+        {
+            "name": "AzDevOpsNotification - Enable-AzDevOpsNotifications",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/AzDevOpsNotification/Enable-AzDevOpsNotification.ps1",
+            "cwd": "${workspaceFolder}",
+            "args": ["-OrganizationUrl ${input:OrganizationUrl} -Pat ${input:Pat}"]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "OrganizationUrl",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+                "fileName": "${workspaceFolder}/Configuration/configuration.txt",
+                "key": "OrganizationUrl",
+                "default": "$null"
+            }
+        },
+        {
+            "id": "Pat",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+                "fileName": "${workspaceFolder}/Configuration/configuration.txt",
+                "key": "Pat",
+                "default": "$null"
+            }
+        }
+    ]
+}

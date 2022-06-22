@@ -1,0 +1,4 @@
+// Create a copy of this file and rename the copy to 'configuration.txt'
+// Add values for parameters
+OrganizationUrl=
+Pat=

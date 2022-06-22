@@ -1,0 +1,3 @@
+# Ignore configuration files, but not examples
+Configuration/*
+!Configuration/*example*
