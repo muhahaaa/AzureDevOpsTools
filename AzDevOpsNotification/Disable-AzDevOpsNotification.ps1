@@ -11,9 +11,12 @@
     Required PAT scopes:
     - Notifications - Read, write, & manage
 
+    .EXAMPLE
+    ./Disable-AzDevOpsNotifications.ps1 -OrganizationUrl http://dev.azure.com/your-org -Pat 12345xxxYOURPATxxx67890
+
     .NOTES
     Written by (c) Eike Hirdes, 2022 (https://github.com/muhahaaa/)
-    This PowerShell script is released under the MIT license (https://github.com/muhahaaa/blob/main/LICENSE.md)
+    This PowerShell script is released under the MIT license (https://github.com/muhahaaa/AzureDevOpsTools/blob/main/LICENSE.md)
 
     .LINK
     https://github.com/muhahaaa/AzureDevOps
@@ -21,11 +24,11 @@
 
 [CmdletBinding()]
 param(
-    # Azure DevOps organization URl (i.e. https://dev.azure.com/org)
+    # Azure DevOps organization URL (i.e. https://dev.azure.com/org)
     [Parameter(Mandatory = $true)]
     [ValidateNotNullorEmpty()]
     [string]$OrganizationUrl,
-    # Azure DevOps PAT (Scope: Notifications - Read, write, & manage)
+    # Azure DevOps PAT (scope: Notifications - Read, write, & manage)
     [Parameter(Mandatory = $true)]
     [ValidateNotNullorEmpty()]
     [string]$Pat
